@@ -1,5 +1,7 @@
 package com.example.user.myapplication.domain;
 
+import java.util.Date;
+
 /** by Hong Ji Hoon aka Hongvyo on github,
  *  Kim Eun Hye,
  *  Kim Min Ji,
@@ -12,4 +14,5 @@ package com.example.user.myapplication.domain;
  */
 
 public class Officer {
+
 }

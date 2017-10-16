@@ -1,5 +1,7 @@
 package com.example.user.myapplication.presenter;
 
+import com.skp.Tmap.TMapView;
+
 /** by Hong Ji Hoon aka Hongvyo on github,
  *  Kim Eun Hye,
  *  Kim Min Ji,
@@ -11,15 +13,13 @@ package com.example.user.myapplication.presenter;
  * copyright: MIT License
  */
 
-interface ILocationPresenter {
-
-    /* ::주의::
-     * 여기 아직 작업하지 마세요
-     * 준비가 안됬어요
-     */
+public interface ILocationPresenter {
 
     /**
      * 현위치를 기반으로 지도를 보여줍니다.
      */
-    public void loadMap();
+    public void loadMap(TMapView tMapView);
+
+    //확인 버튼 클릭하면 서버로 데이터 전송
+    public void sendToServer();
 }

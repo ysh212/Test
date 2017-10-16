@@ -1,5 +1,9 @@
 package com.example.user.myapplication.domain;
 
+import com.skp.Tmap.TMapMarkerItem;
+
+import java.util.List;
+
 /** by Hong Ji Hoon aka Hongvyo on github,
  *  Kim Eun Hye,
  *  Kim Min Ji,
@@ -30,4 +34,6 @@ public class Connected {
   public static final int CASE_CLOSED = 128;
   //위치 업데이트인 경우
   public static final int LOC_UPDATE = 256;
+
+  public static List<TMapMarkerItem> list;
 }

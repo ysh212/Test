@@ -13,10 +13,16 @@ package com.example.user.myapplication.view;
 
 public interface ILocationView {
 
+    //새로고침 버튼 클릭시 LocationActivity 초기화
+    void showRe();
 
-    /* ::주의::
-     * 여기 아직 작업하지 마세요
-     * 준비가 안됬어요
-     */
+    //아무것도 선택 안하고 확인 버튼 눌렀을 때의 경고알림
+    void showAlert(String message);
+
+    public void loadMap();
+
+    public void addTourist();
+
+    public void removeTourist();
 
 }
