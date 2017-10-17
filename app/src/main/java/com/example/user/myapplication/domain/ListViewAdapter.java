@@ -21,12 +21,10 @@ import java.util.List;
 
 public class ListViewAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
-    private ArrayList<ListItem> listItemList = new ArrayList<ListItem>() ;
+    private ArrayList<Tourist> listItemList = new ArrayList<Tourist>() ;
 
     // ListViewAdapter의 생성자
-    public ListViewAdapter() {
-
-    }
+    public ListViewAdapter() {}
 
     // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
     @Override
@@ -65,25 +63,30 @@ public class ListViewAdapter extends BaseAdapter {
         TextView langTextView = (TextView) convertView.findViewById(R.id.textView4) ;
 
         // Data Set(listItemList)에서 position에 위치한 데이터 참조 획득
-        ListItem listItem = listItemList.get(position);
+        Tourist tourist = listItemList.get(position);
 
         // 아이템 내 각 위젯에 데이터 반영
-        locationTextView.setText(listItem.getLocation());
-        distanceView.setText(listItem.getDistance());
-        requestTimeView.setText((CharSequence) listItem.getRequestTime());
-        langTextView.setText((CharSequence) listItem.getLang());
+        locationTextView.setText(tourist.getLocation());
+        /*
+            수정해야함 - distance
+         */
+        distanceView.setText(tourist.getDistance());
+        requestTimeView.setText((CharSequence) tourist.getRequestTime());
+        langTextView.setText(tourist.getLang());
 
         return convertView;
    }
 
-    // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String location, String distance, Date requestTime, List<String> lang) {
-        ListItem item = new ListItem();
+    // 아이템 데이터 추가를 위한 함수.
+    //public void addItem(String location, String distance, String lang, Date requestTime) {
+    public void addItem(String location, String distance, String lang) {
+
+        Tourist item = new Tourist();
 
         item.setLocation(location);
         item.setDistance(distance);
-        item.setRequestTime(requestTime);
         item.setLang(lang);
+        //item.setRequestTime(requestTime);
 
         listItemList.add(item);
     }

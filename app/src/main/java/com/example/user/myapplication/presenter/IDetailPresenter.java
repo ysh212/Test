@@ -13,7 +13,7 @@ import com.skp.Tmap.TMapView;
  * copyright: MIT License
  */
 
-public interface ILocationPresenter {
+public interface IDetailPresenter {
 
     /**
      * 현위치를 기반으로 지도를 보여줍니다.

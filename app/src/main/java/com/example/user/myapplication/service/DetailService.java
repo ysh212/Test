@@ -11,10 +11,13 @@ package com.example.user.myapplication.service;
  * copyright: MIT License
  */
 
-interface ILocationService {
+public class DetailService implements IDetailService {
+
 
     /* ::주의::
      * 여기 아직 작업하지 마세요
      * 준비가 안됬어요
      */
+
+
 }

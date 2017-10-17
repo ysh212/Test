@@ -12,24 +12,24 @@ package com.example.user.myapplication.presenter;
  */
 
 
-import com.example.user.myapplication.interactor.ILocationInteractor;
-import com.example.user.myapplication.interactor.LocationInteractor;
-import com.example.user.myapplication.view.ILocationView;
+import com.example.user.myapplication.interactor.DetailInteractor;
+import com.example.user.myapplication.interactor.IDetailInteractor;
+import com.example.user.myapplication.view.IDetailView;
 import com.skp.Tmap.TMapView;
 
 /**
  * 여기서 TMAP이나 그냥 지도를 사용해야 할것 같습니다.
  *
  */
-public class LocationPresenter implements ILocationPresenter, ILocationInteractor.checkedBtnListener{
+public class DetailPresenter implements IDetailPresenter, IDetailInteractor.checkedBtnListener{
 
-    ILocationView locationView;
-    ILocationInteractor locationInteractor;
+    IDetailView detailView;
+    IDetailInteractor detailInteractor;
 
 
-    public LocationPresenter(ILocationView locationView){
-        this.locationView = locationView;
-        locationInteractor = new LocationInteractor();
+    public DetailPresenter(IDetailView detailView){
+        this.detailView = detailView;
+        detailInteractor = new DetailInteractor();
 
     }
 
@@ -39,6 +39,7 @@ public class LocationPresenter implements ILocationPresenter, ILocationInteracto
         /*
         인터렉터를 부르세요
          */
+        detailInteractor.tMapInfo(tMapView);
 
     }
 
@@ -52,8 +53,4 @@ public class LocationPresenter implements ILocationPresenter, ILocationInteracto
 
     }
 
-    @Override
-    public void onFailure(String message) {
-        locationView.showAlert(message);
-    }
 }
